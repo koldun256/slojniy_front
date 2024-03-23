@@ -1,0 +1,13 @@
+{
+  "type": "stack",
+  "children": [
+    {
+      "type": "text",
+      "content": "Hello"
+    },
+    {
+      "type": "text",
+      "content": "world"
+    }
+  ]
+}
