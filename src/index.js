@@ -1,4 +1,5 @@
 import parse from './parser'
+import './index.css'
 
 (async () => {
   let data = await fetch('/content.json')
