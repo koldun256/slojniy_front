@@ -1,15 +1,25 @@
 {
-  "type": "stack",
+  "type": "Stack",
   "children": [
     {
-      "type": "text",
-      "content": "Hello",
-      "web-content": "Привет"
+      "type": "Text",
+      "web-content": "$basket.count(1)",
+      "mobile-content": "asdf"
     },
     {
-      "type": "text",
+      "type": "Text",
       "content": "world",
       "classes": ["bold"]
+    },
+    {
+      "type": "Image",
+      "src": "/image.jpg",
+      "alt": "pudge"
+    },
+    {
+      "type": "Button",
+      "onclick": "$basket.add(1)",
+      "label": "Add"
     }
   ]
 }
