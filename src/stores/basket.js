@@ -4,6 +4,9 @@ const selectors = {
     let result = 0
     for(let count of state) result += count
     return result
+  },
+  totalCost(state) {
+    
   }
 }
 

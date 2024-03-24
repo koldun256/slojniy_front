@@ -1,6 +1,7 @@
 import { basket } from './basket' // ох зря я сюда полез
+import { page } from './page'
 
-const stores = { basket }
+const stores = { basket, page }
 
 function getPath(obj, path) {
   let pointer = obj
