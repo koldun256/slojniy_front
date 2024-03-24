@@ -1,9 +1,9 @@
-import Text from "./components/text"
-import Stack from "./components/stack"
+import Text from './components/text'
 import Image from './components/image'
 import Button from './components/button'
+import Flexbox from './components/flexbox'
 
-const components = { Text, Stack, Image, Button }
+const components = { Text, Image, Button, Flexbox }
 
 export default function parse(tree) {
   const data = {}

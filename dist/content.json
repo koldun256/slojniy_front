@@ -1,6 +1,6 @@
 {
-  "type": "Stack",
-  "children": [
+  "type": "Flexbox",
+  "data": [
     {
       "type": "Text",
       "web-content": "$basket.count(1)",

@@ -1,13 +1,20 @@
 const selectors = {
   count: (state, id) => state[id] || 0,
+  countAll: (state) => {
+    let result = 0
+    for(let count of state) result += count
+    return result
+  }
 }
 
 const items = {}
 const callbacks = []
 
 export const basket = {
+  getState(selector, args) {
+    return selectors[selector](items, ...args)
+  },
   sub(selector, callback, args) {
-    console.log('new sub ', selector, args)
     const i = callbacks.push(data => {
       callback(selectors[selector](data, ...args))
     })

@@ -24,8 +24,8 @@ export default function Stack(data, parse) {
     }
   }
   
-  // const unsubscribe = 
-  //   StoreManager.onChange({content: data.content, classes: data.classes}, setData)
+   const unsubscribe = 
+     StoreManager.onChange({content: data.content, classes: data.classes}, setData)
   setData(data)
 
   return {

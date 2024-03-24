@@ -2,6 +2,9 @@ const callbacks = []
 let counter = 0
 
 export const count = {
+  getState() {
+    return 
+  },
   sub(selector, callback, args) {
     console.log(`adding callback ${selector} ${args}`)
     callbacks.push(callback)

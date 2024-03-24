@@ -1,4 +1,4 @@
-import { basket } from './basket'
+import { basket } from './basket' // ох зря я сюда полез
 
 const stores = { basket }
 
@@ -26,7 +26,7 @@ export const StoreManager = {
       if(match) {
         const [ storeName, selector, args ] = match.slice(1)
         const store = stores[storeName]
-        setPath(data, path, 'bipki')
+        setPath(data, path, store.getState(selector, args))
         const unsub = store.sub(selector, newVal => {
           setPath(data, path, newVal)
           callback(data)
@@ -41,7 +41,7 @@ export const StoreManager = {
       if(!data[key]) continue
       unsubs.push(StoreManager.onChange(data, callback, [...path, key]))
     }
-
+    if(path.length == 0) callback(data)
     return () => {
       for(let unsub of unsubs) unsub()
     }

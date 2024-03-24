@@ -5,7 +5,6 @@ export default function Text(data, parse) {
   const element = document.createElement('span')
 
   const setData = data => {
-    console.log("updating data!!!")
     element.innerText = data.content
     element.className = 'text'
     if(data.classes) {
@@ -15,8 +14,6 @@ export default function Text(data, parse) {
   
   const unsubscribe = 
     StoreManager.onChange({content: data.content, classes: data.classes}, setData)
-
-  setData(data)
 
   return {
     element,
