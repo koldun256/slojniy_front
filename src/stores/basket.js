@@ -10,6 +10,14 @@ const selectors = {
   }
 }
 
+const post = (url, data) => fetch(url, {
+  method: "POST",
+  body: JSON.stringify(data),
+  headers: {
+    "Content-type": "application/json; charset=UTF-8"
+  }
+})
+
 const items = {}
 const callbacks = []
 
@@ -28,10 +36,12 @@ export const basket = {
       case 'add':
         if(!(id in items)) items[id] = 0
         items[id]++
+        post('/api/add')
         break
       case 'remove':
         if(!items[id]) return
         items[id]--
+        post('/api/sub')
         break
     }
     callbacks.forEach(callback => callback({...items}))

@@ -1,6 +1,15 @@
 import { basket } from './basket' // ох зря я сюда полез
 import { page } from './page'
 
+const post = (url, data) => fetch(url, {
+  method: "POST",
+  body: JSON.stringify(data),
+  headers: {
+    "Content-type": "application/json; charset=UTF-8"
+  }
+});
+
+
 const stores = { basket, page }
 
 function getPath(obj, path) {
