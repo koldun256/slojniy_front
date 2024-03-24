@@ -3,11 +3,13 @@
   "children": [
     {
       "type": "text",
-      "content": "Hello"
+      "content": "Hello",
+      "web-content": "Привет"
     },
     {
       "type": "text",
-      "content": "world"
+      "content": "world",
+      "classes": ["bold"]
     }
   ]
 }

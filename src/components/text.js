@@ -1,3 +1,6 @@
+import './text.css'
 export default function Text(data, parse) {
-  return `<span style="color: blue;">${data.content}</span>`
+  let classes = ['text']
+  if(data.classes) for(let className of data.classes) classes.push(className)
+  return `<span class="${classes.join(' ')}">${data.content}</span>`
 }

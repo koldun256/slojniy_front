@@ -1,0 +1,8 @@
+.text {
+  color: blue;
+}
+
+.text.bold {
+  font-weight: bold;
+  color: black;
+}
