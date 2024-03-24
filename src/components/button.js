@@ -7,7 +7,7 @@ export default function Button(data, parse) {
   element.onclick = e => StoreManager.dispatch(data.onclick)
 
   const setData = data => {
-    element.innerText = data.label
+    element.innerText = data.text
     element.className = 'button'
     if(data.classes) {
       for(let className of data.classes) element.className += className
@@ -15,7 +15,7 @@ export default function Button(data, parse) {
   }
   
   const unsubscribe = 
-    StoreManager.onChange({label: data.label, classes: data.classes}, setData)
+    StoreManager.onChange({text: data.text, classes: data.classes}, setData)
 
   setData(data)
 
