@@ -2,9 +2,8 @@ import './button.css'
 import { StoreManager } from '../stores/store'
 
 export default function Button(data, parse) {
-  console.log(data)
   const element = document.createElement('div')
-  element.onclick = e => StoreManager.dispatch(data.onclick)
+  element.onclick = e => StoreManager.dispatch(data.on_click)
 
   const setData = data => {
     element.innerText = data.text

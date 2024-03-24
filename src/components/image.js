@@ -7,7 +7,7 @@ export default function Image(data, parse) {
   element.appendChild(image)
 
   const setData = data => {
-    image.setAttribute('src', data.src)
+    image.setAttribute('src', data.content)
     image.setAttribute('alt', data.alt)
 
     element.className = 'image'
@@ -17,7 +17,7 @@ export default function Image(data, parse) {
   }
   
   const unsubscribe = 
-    StoreManager.onChange({src: data.src, alt: data.alt}, setData)
+    StoreManager.onChange({content: data.content, alt: data.alt}, setData)
 
   setData(data)
 
