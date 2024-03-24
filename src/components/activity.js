@@ -7,14 +7,14 @@ const styles = {
   align_content: 'align-content'
 }
 
-export default function Flexbox(data, parse) {
+export default function Activity(data, parse) {
   const element = document.createElement('div')
   let children = []
 
   const setData = newData => {
-    console.log('setting data')
     children.forEach(child => child.destroy)
     element.innerHTML = ""
+    document.title = data.name
     children = []
 
     for(let childData of data.data) {

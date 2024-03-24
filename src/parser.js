@@ -2,8 +2,9 @@ import Text from './components/text'
 import Image from './components/image'
 import Button from './components/button'
 import Flexbox from './components/flexbox'
+import Activity from './components/activity'
 
-const components = { Text, Image, Button, Flexbox }
+const components = { Text, Image, Button, Flexbox, Activity }
 
 export default function parse(tree) {
   const data = {}
